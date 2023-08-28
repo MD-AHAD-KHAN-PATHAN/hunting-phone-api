@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunting Api</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <header class="bg-blue-200">
+
+        <div class="flex justify-between px-24 py-5">
+            <h1 class="text-2xl font-bold text-[#403F3F]">Hot Gadgets</h1>
+            <button class="btn btn-primary">Sign Up</button>
+        </div>
+
+        <div class="text-center py-24">
+            <h1 class="text-5xl font-bold">Apple Iphone 13 Pro Max</h1>
+            <p class="my-7 text-[#706F6F] font-semibold">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration in some form, by injected humou.</p>
+            <button class="btn btn-primary">Buy Now</button>
+        </div>
+
+    </header>
+
+    <main class="m-24">
+
+        <section>
+            <div class="text-center">
+                <h1 class="text-3xl font-bold">Search your phone</h1>
+                <div class="my-8">
+                    <input id="inputText" type="text" placeholder="Search your phone"
+                        class="input input-bordered w-full max-w-xs" />
+                    <button class="btn btn-primary" onclick="PhoneBrandButton()">Search</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div id="loder" class="text-center hidden my-10">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+        </section>
+
+        <section>
+            <div id="noData" class="hidden">
+                <div class="text-center">
+                    <h1 class="text-6xl font-bold">404</h1>
+                    <p class="text-3xl font-bold">No Data Available</p>
+                    <p class="text-xl font-semibold">Please Search Again</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+
+
+
+            <div id="phone-container" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
+
+            </div>
+
+            <div id="show-all-container" class="hidden text-center my-10">
+                <button onclick="showAll()" class="btn btn-primary">Show All</button>
+            </div>
+        </section>
+
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+
+
+                    <div id="show-details-container">
+
+                    </div>
+                    <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-primary">Close</button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
